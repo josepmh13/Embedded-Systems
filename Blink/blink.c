@@ -6,10 +6,12 @@
 *
 ******************************************************************************/
 
+// Hola JOSE!
+
 #include "msp.h"
 #include "blink.h"
 
-// CAMBIOSSSSSS 
+// CAMBIOSSSSSS
 
 // HACIENDO CAMBIOS TONTOS JOJOSSEEEE
 
