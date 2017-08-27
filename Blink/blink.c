@@ -11,6 +11,16 @@
 
 // CAMBIOSSSSSS 
 
+// HACIENDO CAMBIOS TONTOS JOJOSSEEEE
+
+// LULUISAAA QUESADAAAAAA HOLAAAAA :) :) :)
+
+// cambios vacilonessss
+
+/// CAMBIOSSSSS
+
+// FDJHFJFHSHGJDSHFGJKHDJGD
+
 // ***********************************
 // Main loop
 // ***********************************
@@ -85,6 +95,12 @@ void Setup(void)
 	return;
 }
 
+
 // KFHJKHGJSFHGJS
 
 // POR QUE NO FUNCIONA
+//	UN CAMBIO MAS
+
+// DOS CAMBIOS 
+
+/// TRES CAMBIOSSSSSS
