@@ -6,10 +6,27 @@
 *
 ******************************************************************************/
 
+
+// JOSE PABLO
+// Hola JOSE!
+
+
 #include "msp.h"
 #include "blink.h"
 
 // CAMBIOSSSSSS
+
+
+// HACIENDO CAMBIOS TONTOS JOJOSSEEEE
+
+// LULUISAAA QUESADAAAAAA HOLAAAAA :) :) :)
+
+// cambios vacilonessss
+
+/// CAMBIOSSSSS
+
+// FDJHFJFHSHGJDSHFGJKHDJGD
+
 
 // ***********************************
 // Main loop
