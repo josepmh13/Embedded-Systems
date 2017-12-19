@@ -1,0 +1,93 @@
+Webserver recipes:
+https://layers.openembedded.org/layerindex/branch/master/layer/meta-webserver/
+
+Webserver in Raspberry Pi: 
+https://www.wikihow.com/Make-a-Raspberry-Pi-Web-Server  (CON APACHE2)
+https://www.raspberrypi.org/documentation/remote-access/web-server/nginx.md (CON NGINX)
+
+###############################################################################################################################################
+AGREGAR SSH Y VNC!
+
+Yocto for Raspberry Pi 3:
+https://raspinterest.wordpress.com/2016/11/30/yocto-project-on-raspberry-pi-3/
+
+###############################################################################################################################################
+
+Error en bitbake: 
+
+
+Is you problem is this one :
+
+/tmp/qemu-1.7.1/linux-user/ioctls.h:188:1: error: ‘SNDCTL_DSP_MAPINBUF’ undeclared here (not in a function)
+/tmp/qemu-1.7.1/linux-user/ioctls.h:189:1: error: ‘SNDCTL_DSP_MAPOUTBUF’ undeclared here (not in a function)
+/tmp/qemu-1.7.1/linux-user/ioctls.h:244:1: error: ‘SOUND_MIXER_ACCESS’ undeclared here (not in a function)
+
+In such case, it exists a solution :
+Replace this line :
+#include <linux/soundcard.h>
+by :
+#include <linux/soundcard.h.oss3>
+in the linux-user/syscall.c file.
+
+And the compilation will go fine. This problem seems to be related to Debian and I am not sure who should fix this one.
+I hope it will help you to get QEMU compiled.
+
+###############################################################################################################################################
+
+Systemd: 
+DISTRO_FEATURES_append = " systemd"
+VIRTUAL-RUNTIME_init_manager = "systemd"
+
+###############################################################################################################################################
+
+Para agregar sudo:
+IMAGE_INSTALL_append = "sudo"
+
+###############################################################################################################################################
+
+Para levantar el Wi-fi del RPI:
+
+https://raspinterest.wordpress.com/2017/02/28/configure-wlan0-and-bluetooth-in-yocto-raspberry-pi-3/
+
+cambiar -> IMAGE_INSTALL_append = "linux-firmware-bcm43430" 
+
+agregar:
+DISTRO_FEATURES_append += "wifi"
+CORE_IMAGE_EXTRA_INSTALL += " packagegroup-base-wifi"
+
+Editar: /etc/wpa_supplicant.conf
+	
+network={
+	ssid = "Nombre de la red WiFi"
+	psk = "Contraseña de la red WiFi"
+	proto=RSN
+	key_mgmt=WPA-PSK
+	pairwise=CCMP
+	auth_alg=OPEN
+}
+
+Editar etc/network/interfaces : 
+
+Agregar auto wlan0  (En cualquier parte, esto o el wlan respectivo de la red)
+###############################################################################################################################################
+
+Para agregar nginx, php-fmp y apache
+
+IMAGE_INSTALL_append = "nginx php-fpm apache2"
+
+###############################################################################################################################################
+
+Para agregar Python
+
+IMAGE_INSTALL_append = "python"
+
+###############################################################################################################################################
+
+Para agregar servicio a SysVinit
+
+1. Crear un script de bash que corra el ejecutable deseado 
+2. Probar que el script corre el ejecutable
+3. Darle permisos chmod +x script.sh
+4. Copiar el script a /etc/init.d
+5. Correr update-rc.d script.sh defaults
+	- Mas info: https://www.debuntu.org/how-to-managing-services-with-update-rc-d/ 
