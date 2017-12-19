@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Embedded Systems Laboratory</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<script src="text/datos.txt"></script>
+		<script>
+			function cargarDatos()
+			{
+				document.getElementById("field1").innerHTML=data1;
+				document.getElementById("field2").innerHTML=data2;
+				document.getElementById("field3").innerHTML=data3;
+			}
+		</script>
+	</head>
+
+	<body onload="cargarDatos()">
+		
+		<!-- Header -->
+			<div id="header">
+				<!--<span class="logo icon fa-paper-plane-o"></span>-->
+				<span class="logo icon fa-linux"></span>
+				<h1>Embedded Systems Laboratory</h1>
+				<h4>Authors</h4>
+				<p> Luisa Fernanda Quesada Camacho [B35427] <br /> José Pablo Martínez Hernández [B34024]</p>
+
+		<!-- Main -->
+			<div id="main">
+
+				<div class="box alt container">
+
+					<h2>Wheeled Odometry</h2>
+
+					<section class="feature right">
+
+						<a href="#" class="image icon fa-bolt"><img src="images/pic01.jpg" alt="" /> </a>
+
+						<div class="content">
+							<h3>X Position:</h3>
+							<h6 id="field1"></h6>
+							<!--<h1><iframe src="text/test.txt"></iframe></h1>-->
+							<h3>Y Position:</h3>
+							<h6 id="field2"></h6>
+							<h3>Orientation:</h3>
+							<h6 id="field3"></h6>
+						</div>
+
+					</section>					
+					
+					<h2>Visual Odometry</h2>
+
+                                        <footer class="major container 75%">
+                                                <img src="http://192.168.0.25:8081" alt="Camera MecanumRob">         $
+                                        </footer>
+
+				</div>
+
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+				<div class="container 85%">
+
+					<header class="major last">
+						<h1> University of Costa Rica</h1>
+						<h2>Control Engineering Research Laboratory, CERLab</h2>
+						<h2>Departament of Electrical Engineering</h2>
+					</header>
+
+					<ul class="copyright">
+						<li>Luisa Fernanda Quesada Camacho & José Pablo Martínez Hernández.</li>
+					</ul>
+					
+					<ul class="copyright">
+                                                <li>lu.quesada7@gmail.com </li>
+						<li>josepmh130995@gmail.com</li>
+                                        </ul>
+						
+					<ul class = "copyright">
+						<li>&copy; All rights reserved</li>
+					</ul>
+
+				</div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
